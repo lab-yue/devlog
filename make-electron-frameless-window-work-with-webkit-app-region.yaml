@@ -1,0 +1,17 @@
+title: make electron frameless window work with webkit-app-region
+slug: make-electron-frameless-window-work-with-webkit-app-region
+type: error # pick one from "problem" | "error" | "warning
+date: 2020-05-08T16:27:16.166Z
+tags:
+  - electron
+fix: |
+  https://github.com/electron/electron/issues/1354#issuecomment-404348957
+refs:
+  - https://stackoverflow.com/a/56343762/10005510
+  - https://github.com/electron/electron/issues/1354
+  - https://github.com/kapetan/electron-drag
+  -
+  -
+  -
+reporter:
+  name: yue

@@ -1,0 +1,16 @@
+title: jest this._document.origin is undefined when doing fetch
+type: error # pick one from "problem" | "error" | "warning
+date: 2020-05-08T14:49:09.754Z
+tags:
+  - jest
+  - jsdom
+  - axios
+  - fetch
+fix: |
+  `BASE_URL` set in dotenv causing CORS issue. remove/check it
+refs:
+  - https://github.com/facebook/jest/issues/7050
+  - https://github.com/facebook/jest/issues/8613
+  - https://github.com/redux-offline/redux-offline/issues/308
+reporter:
+  name: yue

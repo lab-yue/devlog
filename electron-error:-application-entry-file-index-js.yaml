@@ -1,0 +1,14 @@
+title: "electron Error: Application entry file index.js"
+slug: electron-error:-application-entry-file-index-js
+type: error # pick one from "problem" | "error" | "warning
+date: 2020-05-08T16:04:18.375Z
+tags:
+  - electron
+message: |
+  some error message
+fix: |
+  remove `@` from package name
+refs:
+  - https://github.com/electron-userland/electron-builder/issues/2484
+reporter:
+  name: yue

@@ -1,0 +1,15 @@
+title: socket io wildcard
+type: error # pick one from "problem" | "error" | "warning
+date: 2020-05-08T14:16:05.804Z
+tags:
+  - socket
+fix: |
+  use `socketio-wildcard` or just overwrite the `socket.onevent` function
+refs:
+  - https://stackoverflow.com/a/33960032
+  - https://www.npmjs.com/package/socket.io-wildcard
+  - https://github.com/hden/socketio-wildcard
+  - https://github.com/socketio/socket.io-client/blob/661f1e7fac2488b6d3d206f96bb59073c4c98b1c/lib/socket.js#L268
+  - https://github.com/socketio/socket.io/issues/434
+reporter:
+  name: yue

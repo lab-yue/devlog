@@ -1,0 +1,13 @@
+title: react material ui theme config doesn't work
+type: problem # pick one from "problem" | "error" | "warning
+date: 2020-05-08T14:01:20.346Z
+tags:
+  - react
+  - material-ui
+fix: |
+  add `<CssBaseline/>` component to app
+refs:
+  - https://material-ui.com/components/css-baseline/#css-baseline
+  -
+reporter:
+  name: yue
