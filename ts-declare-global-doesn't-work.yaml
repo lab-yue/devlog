@@ -1,0 +1,14 @@
+title: typescript declare global doesn't work
+slug: typescript-declare-global-doesn't-work
+type: error
+tags:
+  - typescript
+fix: |
+  remove `import` / `export` in files has code `declare module xxx`
+  add `import` / `export`  in files has code `declare global ...`
+refs:
+  - https://github.com/microsoft/TypeScript/issues/22217#issuecomment-370019383
+  - https://github.com/microsoft/TypeScript/issues/28097
+  - https://github.com/danger/danger-js/issues/955
+reporter:
+  name: yue

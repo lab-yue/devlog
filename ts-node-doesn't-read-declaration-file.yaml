@@ -1,0 +1,13 @@
+title: ts-node doesn't read declaration file
+slug: ts-node-doesn't-read-declaration-file
+type: error
+tags:
+  - typescript
+  - ts-node
+fix: |
+  ts-node@6: ts-node src/index.ts
+  ts-node@7: ts-node --files src/index
+refs:
+  - https://github.com/TypeStrong/ts-node/issues/622#issuecomment-403148256
+reporter:
+  name: yue
