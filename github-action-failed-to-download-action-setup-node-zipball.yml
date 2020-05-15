@@ -1,0 +1,61 @@
+title: Github action Failed to download action setup-node zipball
+slug: github-action-failed-to-download-action-setup-node-zipball
+type: error # pick one from "problem" | "error" | "warning
+date: 2020-05-15T17:07:26.148Z
+tags:
+  - github actions
+  - node
+message: |
+  ##[warning]Failed to download action 'https://api.github.com/repos/actions/setup-node/tarball/v2'. Error Response status code does not indicate success: 404 (Not Found).
+  ##[warning]Back off 19.314 seconds before retry.
+  ##[warning]Failed to download action 'https://api.github.com/repos/actions/setup-node/tarball/v2'. Error Response status code does not indicate success: 404 (Not Found).
+  ##[warning]Back off 29.339 seconds before retry.
+  Current runner version: '2.169.1'
+  Operating System
+  Virtual Environment
+  Prepare workflow directory
+  Prepare all required actions
+  Download action repository 'actions/checkout@v2'
+  Download action repository 'actions/setup-node@v2'
+  ##[warning]Failed to download action 'https://api.github.com/repos/actions/setup-node/zipball/v2'. Error Response status code does not indicate success: 404 (Not Found).
+  ##[warning]Back off 18.108 seconds before retry.
+  ##[warning]Failed to download action 'https://api.github.com/repos/actions/setup-node/zipball/v2'. Error Response status code does not indicate success: 404 (Not Found).
+  ##[warning]Back off 25.205 seconds before retry.
+  Current runner version: '2.169.1'
+  Operating System
+  Ubuntu
+  LTS
+  Virtual Environment
+  Environment: ubuntu-18.04
+  Version: 20200430.1
+  Included Software: https://github.com/actions/virtual-environments/blob/ubuntu18/20200430.1/images/linux/Ubuntu1804-README.md
+  Prepare workflow directory
+  Prepare all required actions
+  Download action repository 'actions/checkout@v2'
+  Download action repository 'actions/setup-node@v2'
+  ##[warning]Failed to download action 'https://api.github.com/repos/actions/setup-node/tarball/v2'. Error Response status code does not indicate success: 404 (Not Found).
+  ##[warning]Back off 19.314 seconds before retry.
+  ##[warning]Failed to download action 'https://api.github.com/repos/actions/setup-node/tarball/v2'. Error Response status code does not indicate success: 404 (Not Found).
+  ##[warning]Back off 29.339 seconds before retry.
+  Current runner version: '2.169.1'
+  Operating System
+  Microsoft Windows Server 2019
+  10.0.17763
+  Datacenter
+  Virtual Environment
+  Environment: windows-2019
+  Version: 20200511.1
+  Included Software: https://github.com/actions/virtual-environments/blob/win19/20200511.1/images/win/Windows2019-Readme.md
+  Prepare workflow directory
+  Prepare all required actions
+  Download action repository 'actions/checkout@v2'
+  Download action repository 'actions/setup-node@v2'
+  ##[warning]Failed to download action 'https://api.github.com/repos/actions/setup-node/zipball/v2'. Error Response status code does not indicate success: 404 (Not Found).
+  ##[warning]Back off 18.108 seconds before retry.
+  ##[warning]Failed to download action 'https://api.github.com/repos/actions/setup-node/zipball/v2'. Error Response status code does not indicate success: 404 (Not Found).
+  ##[warning]Back off 25.205 seconds before retry.
+fix: |
+  use `setup-node@v1` for now
+refs:
+  -
+reporter: yue

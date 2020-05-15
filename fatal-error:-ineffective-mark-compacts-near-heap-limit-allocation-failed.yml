@@ -3,7 +3,7 @@ slug: fatal-error:-ineffective-mark-compacts-near-heap-limit-allocation-failed
 type:  error # pick one from "problem" | "error" | "warning
 date: 2020-05-10T15:20:02.500Z
 tags:
-  -
+  - node
 message: |
   <--- Last few GCs --->
 
@@ -30,6 +30,7 @@ message: |
 fix: |
   some fix
 refs:
-  -
-  -
+  - https://qiita.com/RikuKomiya/items/9543770f6b0a9ea1936e
+  - https://www.cnblogs.com/ybixian/p/11470659.html
+  - https://github.com/angular/angular-cli/issues/13734
 reporter: yue
