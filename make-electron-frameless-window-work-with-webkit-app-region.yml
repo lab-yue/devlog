@@ -1,7 +1,7 @@
 title: make electron frameless window work with webkit-app-region
 slug: make-electron-frameless-window-work-with-webkit-app-region
 type: error # pick one from "problem" | "error" | "warning
-date: 2020-05-08T16:27:16.166Z
+date: "2020-05-08T16:27:16.166Z"
 tags:
   - electron
 fix: |
@@ -13,5 +13,4 @@ refs:
   -
   -
   -
-reporter:
-  name: yue
+reporter: yue

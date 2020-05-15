@@ -1,7 +1,7 @@
 title: electron cannot compute electron version from installed node modules
 slug: electron-cannot-compute-electron-version-from-installed-node-modules
 type: error # pick one from "problem" | "error" | "warning
-date: 2020-05-08T15:54:22.091Z
+date: "2020-05-08T15:54:22.091Z"
 tags:
   - electron
 message: |
@@ -11,5 +11,4 @@ fix: |
   https://github.com/electron-userland/electron-builder/issues/3984#issuecomment-547115107
 refs:
   - https://github.com/electron-userland/electron-builder/issues/3764
-reporter:
-  name: yue
+reporter: yue

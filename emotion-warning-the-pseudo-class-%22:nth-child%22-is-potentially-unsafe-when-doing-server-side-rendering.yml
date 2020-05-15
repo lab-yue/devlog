@@ -1,6 +1,6 @@
 title: emotion warning The pseudo class ":nth-child" is potentially unsafe when doing server-side rendering."
 type: error # pick one from "problem" | "error" | "warning
-date: 2020-05-08T15:16:27.173Z
+date: "2020-05-08T15:16:27.173Z"
 tags:
   - react
   - jest
@@ -10,5 +10,4 @@ fix: |
 refs:
   - https://github.com/emotion-js/emotion/issues/1105
   - https://github.com/storybookjs/storybook/issues/6998
-reporter:
-  name: yue
+reporter: yue

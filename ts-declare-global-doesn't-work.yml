@@ -1,5 +1,5 @@
 title: typescript declare global doesn't work
-date: 2020-01-13T14:01:20.346Z
+date: "2020-01-13T14:01:20.346Z"
 type: error
 tags:
   - typescript
@@ -10,5 +10,4 @@ refs:
   - https://github.com/microsoft/TypeScript/issues/22217#issuecomment-370019383
   - https://github.com/microsoft/TypeScript/issues/28097
   - https://github.com/danger/danger-js/issues/955
-reporter:
-  name: yue
+reporter: yue

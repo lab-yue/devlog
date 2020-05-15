@@ -1,7 +1,7 @@
 title: electron react not rendering in production
 slug: electron-react-not-rendering-in-production
 type: error # pick one from "problem" | "error" | "warning
-date: 2020-05-08T16:11:23.405Z
+date: "2020-05-08T16:11:23.405Z"
 tags:
   - electron
   - react
@@ -10,5 +10,4 @@ fix: |
   change `<Router/>` to `<HashRouter/>`
 refs:
   - https://github.com/ReactTraining/react-router/issues/6726
-reporter:
-  name: yue
+reporter: yue

@@ -1,5 +1,5 @@
 title: ts-node doesn't read declaration file
-date: 2020-01-23T14:01:20.346Z
+date: "2020-01-23T14:01:20.346Z"
 type: error
 tags:
   - typescript
@@ -9,5 +9,4 @@ fix: |
   ts-node@7: ts-node --files src/index
 refs:
   - https://github.com/TypeStrong/ts-node/issues/622#issuecomment-403148256
-reporter:
-  name: yue
+reporter: yue

@@ -1,0 +1,14 @@
+title: node ERR_PACKAGE_PATH_NOT_EXPORTED
+slug: node-err_package_path_not_exported
+type:  error # pick one from "problem" | "error" | "warning
+date: 2020-05-10T15:57:19.140Z
+tags:
+  -
+message: |
+  some error message
+fix: |
+  some fix
+refs:
+  -
+  -
+reporter: yue

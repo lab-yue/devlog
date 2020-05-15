@@ -1,12 +1,12 @@
 title: jest useFakeTimers can not use inside async function
 slug: jest-usefaketimers-can-not-use-inside-async-function
 type: error # pick one from "problem" | "error" | "warning
-date: 2020-05-08T15:44:56.970Z
+date: "2020-05-08T15:44:56.970Z"
 tags:
   - jest
 message:
 fix: |
-  no fix.
+  no fix
 refs:
   - https://github.com/testing-library/react-testing-library/issues/244#issuecomment-610893195
   - https://github.com/facebook/jest/pull/5171
@@ -14,5 +14,4 @@ refs:
   - https://github.com/facebook/jest/pull/7776#issuecomment-549058684
   - https://github.com/facebook/jest/issues/7151#issuecomment-594444417
   - https://github.com/facebook/jest/pull/6876#issuecomment-591129469
-reporter:
-  name: yue
+reporter: yue
