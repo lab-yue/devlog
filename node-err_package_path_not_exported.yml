@@ -1,14 +1,35 @@
 title: node ERR_PACKAGE_PATH_NOT_EXPORTED
 slug: node-err_package_path_not_exported
-type:  error # pick one from "problem" | "error" | "warning
+type: error # pick one from "problem" | "error" | "warning
 date: 2020-05-10T15:57:19.140Z
 tags:
-  -
+  - node
 message: |
-  some error message
+  nerd yue, [May 9, 2020 21:29:44]:
+  Error [ERR_PACKAGE_PATH_NOT_EXPORTED]: No "exports" main resolved in /home/yue/dev/node_modules/faunadb/package.json
+      at resolveExportsTarget (internal/modules/cjs/loader.js:596:11)
+      at applyExports (internal/modules/cjs/loader.js:454:14)
+      at resolveExports (internal/modules/cjs/loader.js:507:23)
+      at Function.Module._findPath (internal/modules/cjs/loader.js:635:31)
+      at Function.Module._resolveFilename (internal/modules/cjs/loader.js:1007:27)
+      at Function.Module._load (internal/modules/cjs/loader.js:890:27)
+      at Module.require (internal/modules/cjs/loader.js:1080:19)
+      at require (internal/modules/cjs/helpers.js:72:18)
+      at Object.faunadb (/home/yue/dev/packages/web/.next/server/static/development/pages/index.js:194:18)
+      at webpack_require (/home/yue/dev/packages/web/.next/server/static/development/pages/index.js:23:31)
+      at Module../pages/db.ts (/home/yue/dev/packages/web/.next/server/static/development/pages/index.js:107:65)
+      at webpack_require (/home/yue/dev/packages/web/.next/server/static/development/pages/index.js:23:31)
+      at Module../pages/index.tsx (/home/yue/dev/packages/web/.next/server/static/development/pages/index.js:133:61)
+      at webpack_require (/home/yue/dev/packages/web/.next/server/static/development/pages/index.js:23:31)
+      at Object.4 (/home/yue/dev/packages/web/.next/server/static/development/pages/index.js:182:18)
+      at webpack_require (/home/yue/dev/packages/web/.next/server/static/development/pages/index.js:23:31) {
+    code: 'ERR_PACKAGE_PATH_NOT_EXPORTED'
+  }
 fix: |
-  some fix
+  remove exports field from installed package or downgrade node version
 refs:
-  -
-  -
+  - https://github.com/babel/babel/issues/11216
+  - https://github.com/nodejs/node/issues/32107
+  - https://www.drupal.org/project/radix/issues/3118274
+
 reporter: yue
