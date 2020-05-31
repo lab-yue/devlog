@@ -1,0 +1,22 @@
+title: "node Error: listen EACCES: permission denied 127.0.0.1:80"
+type: error # pick one from "problem" | "error" | "warning
+date: 2020-05-30T13:26:29.214Z
+tags:
+  - node
+message: |
+  Error: listen EACCES: permission denied 127.0.0.1:80
+    at Server.setupListenHandle [as _listen2] (net.js:1296:21)
+    at listenInCluster (net.js:1361:12)
+    at GetAddrInfoReqWrap.doListen (net.js:1500:7)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:66:8) {
+  code: 'EACCES',
+  errno: 'EACCES',
+  syscall: 'listen',
+  address: '127.0.0.1',
+  port: 80
+  }
+fix: |
+  processes running without root privileges cannot bind to ports below 1024
+refs:
+  - https://stackoverflow.com/a/9166332
+reporter: yue

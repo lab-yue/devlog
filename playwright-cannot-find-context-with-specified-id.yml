@@ -1,0 +1,35 @@
+title: playwright cannot find context with specified id
+type: error # pick one from "problem" | "error" | "warning
+date: 2020-05-22T14:56:19.228Z
+tags:
+  - playwright
+message: |
+  (node:26625) UnhandledPromiseRejectionWarning: Error: Protocol error (DOM.describeNode): Cannot find context with specified id
+    at /Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/chromium/crConnection.js:130:63
+    at new Promise (<anonymous>)
+    at CRSession.send (/Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/chromium/crConnection.js:129:16)
+    at CRSession.<anonymous> (/Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/helper.js:64:31)
+    at FrameSession._adoptElementHandle (/Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/chromium/crPage.js:712:45)
+    at CRPage.adoptElementHandle (/Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/chromium/crPage.js:225:47)
+    at FrameExecutionContext._adoptIfNeeded (/Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/dom.js:38:47)
+    at visit (/Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/javascript.js:143:37)
+    at visit (/Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/javascript.js:136:32)
+    at /Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/javascript.js:154:28
+  -- ASYNC --
+    at CRSession.<anonymous> (/Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/helper.js:63:23)
+    at FrameSession._adoptElementHandle (/Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/chromium/crPage.js:712:45)
+    at CRPage.adoptElementHandle (/Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/chromium/crPage.js:225:47)
+    at FrameExecutionContext._adoptIfNeeded (/Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/dom.js:38:47)
+    at visit (/Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/javascript.js:143:37)
+    at visit (/Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/javascript.js:136:32)
+    at /Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/javascript.js:154:28
+    at Array.map (<anonymous>)
+    at Object.prepareFunctionCall (/Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/javascript.js:154:17)
+    at CRExecutionContext.evaluate (/Users/yue/Desktop/dev/dhu/node_modules/playwright-core/lib/chromium/crExecutionContext.js:48:69)
+  (node:26625) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+  (node:26625) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+fix: |
+  the selected element has been updated or removed from the browser content. Query it again to get a valid elementHandle.
+refs:
+  - https://github.com/puppeteer/puppeteer/issues/1325
+reporter: yue
