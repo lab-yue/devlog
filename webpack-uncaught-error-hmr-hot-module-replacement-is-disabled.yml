@@ -1,0 +1,24 @@
+title: "webpack Uncaught Error: [HMR] Hot Module Replacement is disabled."
+type: error # pick one from "problem" | "error" | "warning
+date: 2020-06-05T09:39:08.216Z
+tags:
+  - webpack
+  - HMR
+message: |
+  process-update.js:10 Uncaught Error: [HMR] Hot Module Replacement is disabled.
+    at Object.<anonymous> (process-update.js:10)
+    at Object../node_modules/webpack-hot-middleware/process-update.js (process-update.js:157)
+    at __webpack_require__ (bootstrap:83)
+    at Object.<anonymous> (client.js:233)
+    at Object../node_modules/webpack-hot-middleware/client.js (client.js:306)
+    at __webpack_require__ (bootstrap:83)
+    at initWHMEventSource (WHMEventSource.js:16)
+    at Object.<anonymous> (ErrorOverlayEntry.js:79)
+    at Object../node_modules/@pmmmwh/react-refresh-webpack-plugin/src/runtime/ErrorOverlayEntry.js (ErrorOverlayEntry.js:88)
+    at __webpack_require__ (bootstrap:83)
+        TypeError: processUpdate is not a function
+fix: |
+  check `HotModuleReplacementPlugin` has been config correctly
+refs:
+  - https://github.com/webpack/webpack/issues/1151
+reporter: yue

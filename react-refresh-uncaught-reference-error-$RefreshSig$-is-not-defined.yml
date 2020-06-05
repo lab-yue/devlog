@@ -1,0 +1,24 @@
+title: "react refresh Uncaught ReferenceError: $RefreshSig$ is not defined"
+type: error # pick one from "problem" | "error" | "warning
+date: 2020-06-05T13:17:53.192Z
+tags:
+  - react
+  - webpack
+message: |
+  Uncaught ReferenceError: $RefreshSig$ is not defined
+    at Module../packages/web/features/auth/authSelector.ts (actions.ts:7)
+    at __webpack_require__ (bootstrap:768)
+    at fn (bootstrap:129)
+    at Module../packages/web/features/selectors.ts (selectors.ts:1)
+    at __webpack_require__ (bootstrap:768)
+    at fn (bootstrap:129)
+    at Module../packages/web/hooks/useEventHashMatch.ts (renderer.js:278967)
+    at __webpack_require__ (bootstrap:768)
+    at fn (bootstrap:129)
+    at Module../packages/web/hooks/index.ts
+fix: |
+  add `ReactRefreshWebpackPlugin` to webpack plugins
+refs:
+  - https://github.com/pmmmwh/react-refresh-webpack-plugin
+
+reporter: yue

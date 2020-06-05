@@ -1,0 +1,25 @@
+title: webpack thread-loader Cannot read property 'errors' of undefined
+slug: webpack-thread-loader-cannot-read-property-'errors'-of-undefined
+type: error # pick one from "problem" | "error" | "warning
+date: 2020-06-05T10:00:50.409Z
+tags:
+  - webpack
+message: |
+  ERROR in ./packages/web/index.tsx
+  Module build failed (from ./node_modules/thread-loader/dist/cjs.js):
+  Thread Loader (Worker 0)
+  Cannot read property 'errors' of undefined
+      at PoolWorker.fromErrorObj (/Users/yue/Desktop/dev/*******************/node_modules/thread-loader/dist/WorkerPool.js:262:12)
+      at /Users/yue/Desktop/dev/*******************/node_modules/thread-loader/dist/WorkerPool.js:204:29
+      at mapSeries (/Users/yue/Desktop/dev/*******************/node_modules/neo-async/async.js:3625:14)
+      at PoolWorker.onWorkerMessage (/Users/yue/Desktop/dev/*******************/node_modules/thread-loader/dist/WorkerPool.js:170:35)
+      at successfulTypeScriptInstance (/Users/yue/Desktop/dev/*******************/node_modules/ts-loader/dist/instances.js:119:28)
+      at Object.getTypeScriptInstance (/Users/yue/Desktop/dev/*******************/node_modules/ts-loader/dist/instances.js:34:12)
+      at Object.loader (/Users/yue/Desktop/dev/*******************/node_modules/ts-loader/dist/index.js:17:41)
+  @ multi ./node_modules/@pmmmwh/react-refresh-webpack-plugin/src/runtime/ReactRefreshEntry.js webpack-hot-middleware/client?path=/__webpack_hmr&timeout=1000&reload=true ./node_modules/@pmmmwh/react-refresh-webpack-plugin/src/runtime/ErrorOverlayEntry.js ./packages/web/index.tsx app[3]
+fix: |
+  check `{ loader: 'thread-loader' }` is in webpack loader config
+refs:
+  - https://stackoverflow.com/questions/52570597/webpack-thread-loader-with-ts-loader
+  - https://github.com/TypeStrong/ts-loader/blob/master/examples/thread-loader/webpack.config.js
+reporter: yue

@@ -1,0 +1,31 @@
+title: Gridsome upgrade error These relative modules were not found
+slug: gridsome-upgrade-error-these-relative-modules-were-not-found
+type: error # pick one from "problem" | "error" | "warning
+date: 2020-06-03T18:03:27.280Z
+tags:
+  - vue
+  - gridsome
+  - cache
+message: |
+  ERROR  Failed to compile with 15 errors                                                                                                                3:00:15 AM
+  These relative modules were not found:
+   * ./SyllabusButton.vue?vue&type=style&index=0&lang=scss& in ./src/components/SyllabusButton.vue
+   * ./SyllabusList.vue?vue&type=style&index=0&lang=scss& in ./src/components/SyllabusList.vue
+   * ./SyllabusSection.vue?vue&type=style&index=0&lang=scss& in ./src/components/SyllabusSection.vue
+   * ./Teacher.vue?vue&type=style&index=0&id=bb5a2b3a&lang=scss&scoped=true& in ./src/templates/Teacher.vue
+   * ./Field.vue?vue&type=style&index=0&id=0d5799bb&lang=scss&scoped=true& in ./src/templates/Field.vue
+   * ./Course.vue?vue&type=style&index=0&id=12511f2a&lang=scss&scoped=true& in ./src/templates/Course.vue
+   * ./Category.vue?vue&type=style&index=0&id=6e759e66&lang=scss&scoped=true& in ./src/templates/Category.vue
+   * ./Teacher.vue?vue&type=style&index=0&id=5afe3424&lang=scss&scoped=true& in ./src/pages/Teacher.vue
+   * ./Search.vue?vue&type=style&index=0&id=4da00568&lang=scss&scoped=true& in ./src/pages/Search.vue
+   * ./Email.vue?vue&type=style&index=0&id=0b62f4b0&lang=scss&scoped=true& in ./src/pages/Email.vue
+   * ./Index.vue?vue&type=style&index=0&lang=scss& in ./src/pages/Index.vue
+   * ./Default.vue?vue&type=style&index=0&lang=scss& in ./src/layouts/Default.vue
+   * ./SyllabusFooter.vue?vue&type=style&index=0&lang=scss& in ./src/components/SyllabusFooter.vue
+   * ./SyllabusHeader.vue?vue&type=style&index=0&id=21b9f202&lang=scss&scoped=true& in ./src/components/SyllabusHeader.vue
+   * ./SyllabusSearch.vue?vue&type=style&index=0&lang=scss& in ./src/components/SyllabusSearch.vue
+fix: |
+  remove `.cache` folder in node_modules and `.temp` in src. Then run `yarn install` again.
+refs:
+  - https://github.com/vuejs/vue-cli/issues/439
+reporter: yue
