@@ -1,0 +1,51 @@
+title: "Arch Linux update error: extract: not overwriting dir with file /usr/local/share/man"
+type: error # pick one from "problem" | "error" | "warning
+date: 2020-06-15T12:58:06.996Z
+tags:
+  - Arch Linux
+  - pacman
+message: |
+  (822/822) checking package integrity                                                    [##################################################] 100%
+  (822/822) loading package files                                                         [##################################################] 100%
+  (822/822) checking for file conflicts                                                   [##################################################] 100%
+  error: failed to commit transaction (conflicting files)
+  glew: /usr/lib/libGLEW.so.2.2 exists in filesystem
+  glew: /usr/lib/libGLEW.so.2.2.0 exists in filesystem
+  Errors occurred, no packages were upgraded.
+
+  Total Download Size:     31.48 MiB
+  Total Installed Size:  9401.27 MiB
+  Net Upgrade Size:       188.91 MiB
+
+  :: Proceed with installation? [Y/n] y
+  :: Retrieving packages...
+   amdvlk-2020.Q2.4-1-x86_64                                   15.8 MiB  2.13 MiB/s 00:07 [##################################################] 100%
+   lib32-amdvlk-2020.Q2.4-1-x86_64                             15.7 MiB  2.05 MiB/s 00:08 [##################################################] 100%
+  (822/822) checking keys in keyring                                                      [##################################################] 100%
+  (822/822) checking package integrity                                                    [##################################################] 100%
+  (822/822) loading package files                                                         [##################################################] 100%
+  (822/822) checking for file conflicts                                                   [##################################################] 100%
+  (824/824) checking available disk space                                                 [##################################################] 100%
+  warning: could not get file information for usr/bin/node
+  :: Running pre-transaction hooks...
+  (1/2) Removing linux initcpios...
+  (2/2) Unregistering Haskell modules...
+  :: Processing package changes...
+  (1/2) removing libwbclient                                                              [##################################################] 100%
+  (2/2) removing haskell-exceptions                                                       [##################################################] 100%
+  (  1/822) upgrading linux-api-headers                                                   [##################################################] 100%
+  (  2/822) upgrading tzdata                                                              [##################################################] 100%
+  (  3/822) upgrading iana-etc                                                            [##################################################] 100%
+  (  4/822) upgrading filesystem                                                          [##################################################] 100%
+  warning: /etc/shadow installed as /etc/shadow.pacnew
+  error: extract: not overwriting dir with file /usr/local/share/man
+  error: problem occurred while upgrading filesystem
+  error: could not commit transaction
+  error: failed to commit transaction (transaction aborted)
+  Errors occurred, no packages were upgraded.
+fix: |
+  rm -rf /user/local/share/man
+refs:
+  - https://bugs.archlinux.org/task/17534
+  - https://bbs.archlinux.org/viewtopic.php?id=128301
+reporter: yue

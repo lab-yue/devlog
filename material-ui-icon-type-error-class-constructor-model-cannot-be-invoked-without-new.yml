@@ -1,0 +1,62 @@
+title: "material-ui icon TypeError: Class constructor Model cannot be invoked without 'new'"
+type: error # pick one from "problem" | "error" | "warning
+date: 2020-06-15T05:14:30.477Z
+tags:
+  - webpack
+  - material-ui
+message: |
+  yarn run v1.22.4
+  $ env-cmd -f .***.*********** ts-node-dev --respawn --transpileOnly ./scripts/***/.ts
+  Using ts-node version 8.6.2, typescript version 3.9.2
+  [2020-06-15 14:09:32]  common  use env file: *********** 
+  68% building 1890/1939 modules 49 active .../icons/esm/SettingsEthernetSharp.js(node:58104) UnhandledPromiseRejectionWarning: TypeError: Class constructor Model cannot be invoked without 'new'
+      at new Event (/Users/***/Desktop/dev/*******************/packages/***/***/***.ts:21:42)
+      at Function.build (/Users/***/Desktop/dev/*******************/node_modules/sequelize/lib/model.js:2167:12)
+      at Promise.try (/Users/***/Desktop/dev/*******************/node_modules/sequelize/lib/model.js:3096:28)
+  From previous event:
+      at Function.update (/Users/***/Desktop/dev/*******************/node_modules/sequelize/lib/model.js:3093:23)
+      at EventService.<anonymous> (/Users/***/Desktop/dev/*******************/packages/***/***/***.ts:61:18)
+      at step (/Users/***/Desktop/dev/*******************/packages/***/***/***.ts:44:23)
+      at Object.next (/Users/***/Desktop/dev/*******************/packages/***/***/***.ts:25:53)
+      at /Users/***/Desktop/dev/*******************/packages/***/***/***.ts:19:71
+      at new Promise (<anonymous>)
+      at __awaiter (/Users/***/Desktop/dev/*******************/packages/***/***/***.ts:15:12)
+      at EventService.resetAllStreamingFlag (/Users/***/Desktop/dev/*******************/packages/***/***/***.ts:131:16)
+      at Object.<anonymous> (/Users/***/Desktop/dev/*******************/packages/***/***/***.ts:53:24)
+      at step (/Users/***/Desktop/dev/*******************/packages/***/***/***.ts:33:23)
+      at Object.next (/Users/***/Desktop/dev/*******************/packages/***/***/***.ts:14:53)
+      at fulfilled (/Users/***/Desktop/dev/*******************/packages/***/***/***.ts:5:58)
+  (node:58104) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+  (node:58104) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+  webpack built ec480b49f86610b23390 in 17961ms
+  ℹ ｢wdm｣: Hash: ec480b49f86610b23390
+  Version: webpack 4.42.1
+  Time: 17961ms
+  Built at: 06/15/2020 2:09:54 PM
+
+  ...
+
+  Entrypoint app = app.js
+  [0] multi ./node_modules/@pmmmwh/react-refresh-webpack-plugin/src/runtime/ReactRefreshEntry.js webpack-hot-middleware/client?path=/__webpack_hmr&timeout=1000&reload=true ./node_modules/@pmmmwh/react-refresh-webpack-plugin/src/runtime/ErrorOverlayEntry.js ./packages/web/index.tsx 64 bytes {app} [built]
+  [./node_modules/@pmmmwh/react-refresh-webpack-plugin/src/overlay/index.js] 8.82 KiB {app} [built]
+  [./node_modules/@pmmmwh/react-refresh-webpack-plugin/src/runtime/ErrorOverlayEntry.js] 2.38 KiB {app} [built]
+  [./node_modules/@pmmmwh/react-refresh-webpack-plugin/src/runtime/ReactRefreshEntry.js] 1.47 KiB {app} [built]
+  [./node_modules/@pmmmwh/react-refresh-webpack-plugin/src/runtime/errorEventHandlers.js] 2.91 KiB {app} [built]
+  [./node_modules/@pmmmwh/react-refresh-webpack-plugin/src/runtime/formatWebpackErrors.js] 2.78 KiB {app} [built]
+  [./node_modules/@pmmmwh/react-refresh-webpack-plugin/src/runtime/refreshUtils.js] 7.37 KiB {app} [built]
+  [./node_modules/@pmmmwh/react-refresh-webpack-plugin/src/runtime/sockets/WHMEventSource.js] 996 bytes {app} [built]
+  [./node_modules/querystring-es3/index.js] 127 bytes {app} [built]
+  [./node_modules/react-dom/index.js] 1.33 KiB {app} [built]
+  [./node_modules/react-refresh/runtime.js] 222 bytes {app} [built]
+  [./node_modules/react/index.js] 190 bytes {app} [built]
+  [./node_modules/webpack-hot-middleware/client-overlay.js] (webpack)-hot-middleware/client-overlay.js 2.17 KiB {app} [built]
+  [./node_modules/webpack-hot-middleware/client.js?path=/__webpack_hmr&timeout=1000&reload=true] (webpack)-hot-middleware/client.js?path=/__webpack_hmr&timeout=1000&reload=true 7.68 KiB {app} [built]
+  [./packages/web/index.tsx] 835 bytes {app} [built]
+      + 6371 hidden modules
+  ℹ ｢wdm｣: Compiled successfully.
+
+fix: |
+  check `compilerOptions` in tsconfig
+refs:
+  -
+reporter: yue

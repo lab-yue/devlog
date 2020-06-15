@@ -1,0 +1,42 @@
+title: "jest error import image  SyntaxError: Invalid or unexpected token"
+type: error # pick one from "problem" | "error" | "warning
+date: 2020-06-15T12:53:43.642Z
+tags:
+  - jest
+  - babel
+message: |
+  nerd yue, [Jun 14, 2020 10:28:21]:
+  FAIL  packages/server/sockets/__tests__/ngWord.spec.ts
+   ● Test suite failed to run
+
+     /Users/yue/Desktop/dev/*********************/******/***/assets/logo.png:1
+     ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,global,jest){PNG
+                                                                                              
+
+     SyntaxError: Invalid or unexpected token
+
+        6 | import { *** } from '../../***';
+        7 | import { ****** } from '../******';
+     >  8 | import logo from '../../assets/logo.png';
+          | ^
+        9 | 
+       10 | const Flex = styled.div`
+       11 |   display: flex;
+
+       at Runtime.createScriptFromCode (node_modules/jest-runtime/build/index.js:1085:14)
+       at Object.<anonymous> (************/******/******/******/index.tsx:8:1)
+fix: |
+  add `identity-obj-proxy` and modify jest config
+
+  ```
+  "jest": {
+    "moduleNameMapper": {
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy"
+    }
+  }
+  ```
+
+refs:
+  - https://github.com/facebook/jest/issues/2663
+  -
+reporter: yue
