@@ -1,0 +1,27 @@
+title: "playwright Error: Evaluation failed: ReferenceError: __read is not defined"
+type:  error # pick one from "problem" | "error" | "warning
+date: 2020-06-21T13:10:54.506Z
+tags:
+  - playwright
+  - typescript
+message: |
+  (node:87421) UnhandledPromiseRejectionWarning: Error: Evaluation failed: ReferenceError: __read is not defined
+    at playwright_evaluation_script:4:38
+    at playwright_evaluation_script:25:27
+    at CRExecutionContext.evaluate (/Users/***/Desktop/dev/***/node_modules/playwright-core/lib/chromium/crExecutionContext.js:82:23)
+  -- ASYNC --
+    at JSHandle.<anonymous> (/Users/***/Desktop/dev/***/node_modules/playwright-core/lib/helper.js:63:23)
+    at ElementHandle.$$eval (/Users/***/Desktop/dev/***/node_modules/playwright-core/lib/dom.js:390:42)
+  -- ASYNC --
+    at ElementHandle.<anonymous> (/Users/***/Desktop/dev/***/node_modules/playwright-core/lib/helper.js:63:23)
+    at /Users/***/Desktop/dev/***/packages/core/task.ts:79:28
+    at step (/Users/***/Desktop/dev/***/packages/core/task.ts:33:23)
+    at Object.next (/Users/***/Desktop/dev/***/packages/core/task.ts:14:53)
+    at fulfilled (/Users/***/Desktop/dev/***/packages/core/task.ts:5:58)
+  (node:87421) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+  (node:87421) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+fix: |
+  set `downlevelIteration` to false to disable transpiling
+refs:
+  - https://github.com/puppeteer/puppeteer/issues/1665
+reporter: yue
